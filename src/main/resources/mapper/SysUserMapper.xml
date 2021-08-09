@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.st.mapper.SysUserMapper">
+  <resultMap id="BaseResultMap" type="com.st.domain.SysUser">
+    <!--@mbg.generated-->
+    <!--@Table sys_user-->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="realname" jdbcType="VARCHAR" property="realname" />
+    <result column="gender" jdbcType="BOOLEAN" property="gender" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="telphone" jdbcType="VARCHAR" property="telphone" />
+    <result column="status" jdbcType="BOOLEAN" property="status" />
+    <result column="type" jdbcType="BOOLEAN" property="type" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, username, realname, gender, `password`, telphone, `status`, `type`
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from sys_user
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    <!--@mbg.generated-->
+    delete from sys_user
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.st.domain.SysUser">
+    <!--@mbg.generated-->
+    insert into sys_user (id, username, realname, 
+      gender, `password`, telphone, 
+      `status`, `type`)
+    values (#{id,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR}, #{realname,jdbcType=VARCHAR}, 
+      #{gender,jdbcType=BOOLEAN}, #{password,jdbcType=VARCHAR}, #{telphone,jdbcType=VARCHAR}, 
+      #{status,jdbcType=BOOLEAN}, #{type,jdbcType=BOOLEAN})
+  </insert>
+  <insert id="insertSelective" parameterType="com.st.domain.SysUser">
+    <!--@mbg.generated-->
+    insert into sys_user
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="username != null">
+        username,
+      </if>
+      <if test="realname != null">
+        realname,
+      </if>
+      <if test="gender != null">
+        gender,
+      </if>
+      <if test="password != null">
+        `password`,
+      </if>
+      <if test="telphone != null">
+        telphone,
+      </if>
+      <if test="status != null">
+        `status`,
+      </if>
+      <if test="type != null">
+        `type`,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="username != null">
+        #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="realname != null">
+        #{realname,jdbcType=VARCHAR},
+      </if>
+      <if test="gender != null">
+        #{gender,jdbcType=BOOLEAN},
+      </if>
+      <if test="password != null">
+        #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="telphone != null">
+        #{telphone,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=BOOLEAN},
+      </if>
+      <if test="type != null">
+        #{type,jdbcType=BOOLEAN},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.st.domain.SysUser">
+    <!--@mbg.generated-->
+    update sys_user
+    <set>
+      <if test="username != null">
+        username = #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="realname != null">
+        realname = #{realname,jdbcType=VARCHAR},
+      </if>
+      <if test="gender != null">
+        gender = #{gender,jdbcType=BOOLEAN},
+      </if>
+      <if test="password != null">
+        `password` = #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="telphone != null">
+        telphone = #{telphone,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        `status` = #{status,jdbcType=BOOLEAN},
+      </if>
+      <if test="type != null">
+        `type` = #{type,jdbcType=BOOLEAN},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.st.domain.SysUser">
+    <!--@mbg.generated-->
+    update sys_user
+    set username = #{username,jdbcType=VARCHAR},
+      realname = #{realname,jdbcType=VARCHAR},
+      gender = #{gender,jdbcType=BOOLEAN},
+      `password` = #{password,jdbcType=VARCHAR},
+      telphone = #{telphone,jdbcType=VARCHAR},
+      `status` = #{status,jdbcType=BOOLEAN},
+      `type` = #{type,jdbcType=BOOLEAN}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
