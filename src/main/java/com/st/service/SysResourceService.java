@@ -1,6 +1,7 @@
 package com.st.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.st.controller.command.SysResourceCommand;
 import com.st.domain.SysResource;
 
 /**
@@ -8,4 +9,5 @@ import com.st.domain.SysResource;
  */
 public interface SysResourceService extends IService<SysResource> {
 
+    void add(SysResourceCommand command);
 }

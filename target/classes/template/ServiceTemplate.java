@@ -1,7 +1,6 @@
 package com.st.service;
 
-import com.baomidou.mybatisplus.extension.service.IService;
-import com.st.domain.${baseName};
+{baseName};
 
 /**
  * @author shent

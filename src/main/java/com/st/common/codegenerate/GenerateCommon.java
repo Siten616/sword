@@ -1,4 +1,4 @@
-package com.st.codegenerate;
+package com.st.common.codegenerate;
 
 import org.beetl.core.Configuration;
 import org.beetl.core.GroupTemplate;

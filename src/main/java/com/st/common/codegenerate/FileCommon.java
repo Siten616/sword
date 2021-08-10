@@ -1,4 +1,4 @@
-package com.st.codegenerate;
+package com.st.common.codegenerate;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -16,7 +16,7 @@ public class SysUser {
     */
     @ApiModelProperty(value="id")
     @TableId(value = "id",type = IdType.ASSIGN_ID)
-    private Integer id;
+    private Long id;
 
     /**
     * 用户名
