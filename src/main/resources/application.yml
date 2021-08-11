@@ -18,6 +18,12 @@ spring:
         max-idle: 100
         min-idle: 0
         max-wait: 5000
+  thymeleaf:
+    cache: false
+    encoding: UTF-8
+    prefix: classpath:/html/
+    suffix: .html
+    mode: HTML5
 mybatis-plus:
   mapper-locations: classpath:/mapper/*Mapper.xml
   global-config:

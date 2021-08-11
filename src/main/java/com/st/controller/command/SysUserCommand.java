@@ -28,4 +28,7 @@ public class SysUserCommand {
 
     @ApiModelProperty("密码")
     private String password;
+
+    @ApiModelProperty("状态")
+    private String status;
 }
